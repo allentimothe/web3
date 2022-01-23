@@ -30,3 +30,5 @@ export default App
 // npm install ethers hardhat @nomiclabs/hardhat-waffle ethereum-waffle @nomiclabs/hardhat-ethers chai
 //npx hardhat
 // to test smart contract run npx hardhat run scripts/deploy.js --network ropsten
+
+//npm run dev to start server

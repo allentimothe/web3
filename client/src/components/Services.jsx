@@ -1,7 +1,7 @@
 import React from "react";
 import { BsShieldFillCheck } from "react-icons/bs";
-import { BiSearchAlt } from "react-icons/bi";
-import { RiHeart2Fill } from "react-icons/ri";
+import { BiCoinStack } from "react-icons/bi";
+import { RiMoneyDollarCircleFill } from "react-icons/ri";
 
 const ServiceCard = ({ color, title, icon, subtitle }) => (
   <div className="flex flex-row justify-start items-start white-glassmorphism p-3 m-2 cursor-pointer hover:shadow-xl">
@@ -18,37 +18,39 @@ const ServiceCard = ({ color, title, icon, subtitle }) => (
 );
 
 const Services = () => (
-  <div className="flex w-full justify-center items-center gradient-bg-services">
-    <div className="flex mf:flex-row flex-col items-center justify-between md:p-20 py-12 px-4">
+  <div className="flex w-full justify-center items-center gradient-bg-services ">
+    <div className="flex mf:flex-row flex-col items-center justify-between md:p-20 py-12 px-4 ">
       <div className="flex-1 flex flex-col justify-start items-start">
-        <h1 className="text-white text-3xl sm:text-5xl py-2 text-gradient ">
-          Services that we
+        <h1 className="text-white text-3xl sm:text-5xl py-2 text-gradient text-right">
+          Services that we will
           <br />
-          continue to improve
+         continue to improve
         </h1>
-        <p className="text-left my-2 text-white font-light md:w-9/12 w-11/12 text-base">
-          Working towards becoming a premiere option in the Crypto/Decentralized space w/
-          various super friendly services we offer
+        <p className="text-left my-2 text-white font-light pl-20 md:w-9/12 w-11/12 text-base text-center">
+          Working towards becoming a premiere <br />option in the
+         
+          Crypto/Decentralized <br />space w/ various super friendly services we offer
         </p>
       </div>
 
-      <div className="flex-1 flex flex-col justify-start items-center">
+      <div className="flex-1 flex flex-col justify-start items-center ">
         <ServiceCard
           color="bg-[#2952E3]"
           title="Secure Transactions"
           icon={<BsShieldFillCheck fontSize={21} className="text-white" />}
-          subtitle="Security is guranteed. No need to worry about the safety of your funds. Completely secure with us"
+          subtitle="Security is guranteed. Don't worry about safety of transactions. Completely secure with us"
         />
         <ServiceCard
           color="bg-[#8945F8]"
           title="Lowest Rates"
-          icon={<BiSearchAlt fontSize={21} className="text-white" />}
-          subtitle="Ever felt like our competition was jerking you around with fees? It's because they were. We aren't in this for profit, strictly for empowering users."
+          icon={<RiMoneyDollarCircleFill fontSize={21} className="text-white" />}
+          subtitle="Paying too much in fees with our competition? 
+          We're in this strictly to empowering users."
         />
         <ServiceCard
           color="bg-[#F84550]"
           title="Flexibility"
-          icon={<RiHeart2Fill fontSize={21} className="text-white" />}
+          icon={<BiCoinStack fontSize={21} className="text-white" />}
           subtitle="Soon you'll be able to buy/sell and send any of the prominent and safe Cryptocurrencies"
         />
       </div>

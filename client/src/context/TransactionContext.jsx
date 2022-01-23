@@ -112,11 +112,13 @@ export const TransactionsProvider = ({ children }) => {
           params: [{
             from: currentAccount,
             to: addressTo,
-            gas: "0x5208",
-            value: parsedAmount._hex,
+            gas: "0x5208", // GWEI Decimal Amount for Ethereum
+            value: parsedAmount._hex, // 0.00001
           }],
         });
 
+
+        //Async Funtion || Unique ID
         const transactionHash = await transactionsContract.addToBlockchain(addressTo, parsedAmount, message, keyword);
 
         setIsLoading(true);
@@ -124,7 +126,7 @@ export const TransactionsProvider = ({ children }) => {
         await transactionHash.wait();
         console.log(`Success - ${transactionHash.hash}`);
         setIsLoading(false);
-
+        // Get Tramsaction count and store it in state.
         const transactionsCount = await transactionsContract.getTransactionCount();
 
         setTransactionCount(transactionsCount.toNumber());
